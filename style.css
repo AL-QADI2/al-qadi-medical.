@@ -1,0 +1,1529 @@
+/* ===================================================
+   Medical Center Pro
+   Version 1.0
+=================================================== */
+/* Google Font */
+@import url(
+    'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap');
+/* Variables */:root{
+    --primary-color:#64335C;      /* Very Dark Grayish Magenta */
+    --primary-dark:#4F2848;
+    --primary-light:#8C5B83;
+    --secondary-color:#F8F5F7;
+    --accent-color:#C89BBF;
+    --text-color:#2F2F2F;
+    --white:#FFFFFF;
+--gray:#64748B;
+--radius:20px;
+--shadow:
+0 15px 40px rgba(0,0,0,.08);
+--transition:.35s;
+}
+/*==========================
+Primary Button
+===========================*/
+
+.btn-primary{
+
+    background-color:#64335C !important;
+    border-color:#64335C !important;
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background-color:#4F2848 !important;
+    border-color:#4F2848 !important;
+    color:#fff;
+
+}
+
+.btn-primary:focus,
+.btn-primary:active{
+
+    background-color:#4F2848 !important;
+    border-color:#4F2848 !important;
+    box-shadow:0 0 0 .25rem rgba(100,51,92,.35) !important;
+
+}
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* إذا كان لديك Navbar ثابت */
+}
+
+body{
+background:var(--light);
+color:var(--dark);
+overflow-x:hidden;
+line-height:1.8;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+transition:.3s;
+}
+
+section{
+padding:100px 0;scroll-margin-top:90px;
+}
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar .container {
+    max-width: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.navbar.scrolled{
+background:rgba(255,255,255,.52);
+backdrop-filter:blur(18px) saturate(135%);
+-webkit-backdrop-filter:blur(18px) saturate(135%);
+border-bottom:1px solid rgba(255,255,255,.5);
+box-shadow:0 10px 30px rgba(52,30,48,.10);
+}
+
+.logo{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.navbar-brand span{
+font-size:24px;
+font-weight:800;
+color:var(--primary);
+
+}
+
+.nav-link{
+font-weight:1000;
+position:relative;
+margin:0 10px;
+color:#a43e7d;
+}
+
+.navbar.scrolled .nav-link{
+color:#222;
+}
+
+.nav-link:hover{
+color:var(--secondary);
+}
+
+.btn{
+    border-radius:50px;
+    padding:12px 28px;
+    transition:.3s;
+}
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+
+/*=========================
+Active Navbar
+=========================*/
+
+.navbar .nav-link{
+    color:#120d0d !important;
+    font-weight:600;
+    margin:0 8px;
+    position:relative;
+    transition:.3s;
+}
+
+/* لون الرابط عند المرور */
+.navbar .nav-link:hover{
+    color:#7d2e74 !important;
+}
+
+/* الصفحة الحالية */
+.navbar .nav-link.active{
+    color:#640632 !important;
+}
+
+/* الخط المتحرك أسفل الرابط */
+.navbar .nav-link::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#430329;
+    transition:.3s;
+}
+
+/* يظهر عند المرور */
+.navbar .nav-link:hover::after{
+    width:100%;
+}
+
+/* يظهر أيضًا للرابط النشط */
+.navbar .nav-link.active::after{
+    width:100%;
+}
+.small-hero{
+height:45vh;
+background:url("../images/offers/banner.jpg") center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/*=========================
+Hero
+==========================*/
+.hero{
+
+position:relative;
+min-height:85vh;
+height:auto;
+padding:120px 0 80px;
+display:flex;
+align-items:center;
+
+background:
+linear-gradient(75deg,#fafafa,#d4d4d4),
+
+url("../images/hero.jpg");
+background-size:cover;
+background-position:center;
+overflow:hidden;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+135deg,
+rgba(0,0,0,.2),
+rgba(0,0,0,.05)
+);
+}
+
+.hero .container{
+    max-width: 100%;
+    padding-right: 45px;
+   padding-left:45px;
+position:relative;
+z-index:2;
+}
+
+.hero-title{
+font-size:72px;
+font-weight:bold;
+color:#414042;
+line-height:1.3;
+margin-bottom:20px;
+text-shadow:
+0 5px 20px rgba(0,0,0,.3);
+}
+
+.hero p{
+font-size:20px;
+font-weight:bold;
+color:#414042;
+margin-bottom:35px;
+}
+
+.hero .btn{
+padding:14px 35px;
+border-radius:50px;
+margin-left:5px;
+font-weight:700;
+}
+
+.hero-image{
+width:110%;
+height: 90vh;
+border-radius:40px;
+box-shadow:
+0 25px 60px rgba(0,0,0,.35);
+animation:float 15s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
+}
+.btn-primary{
+
+background:var(--primary);
+border:none;
+
+}
+.btn-primary:hover{
+background:#0e1011;
+
+}
+.btn-light{
+font-weight:700;
+
+}
+.hero::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:
+rgba(53, 50, 49, 0.027);
+border-radius:50%;
+top:-180px;
+left:-150px;
+animation:circleMove 8s infinite;
+}
+.hero{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:120px;
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        rgb(255, 255, 255),
+        #f8fafc
+    );
+}
+@keyframes circleMove{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(30px);
+}
+100%{
+transform:translateY(0);
+}
+}
+/*=========================
+About
+==========================*/
+
+.about{
+    padding: 80px 0;
+    direction: rtl;
+}
+
+/* الصورة */
+.about img{
+    width: 100%;
+    max-width: 1020px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+animation:float 15s ease-in-out infinite;
+}
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
+}  
+.about .container{
+    max-width: 100%;
+    padding-right: 30px;
+}
+.about .row{
+    margin-right: 10px;
+}
+
+.about .col-lg-6:first-child{
+    padding-right: 50px;
+}
+/* عنوان القسم */
+.about h2{
+    font-family: 'Cairo', sans-serif;
+    font-size: 46px;
+    font-weight: 800; 
+    margin-bottom: 60px;
+     background: linear-gradient(90deg,#b3507e,#a01a58,#414042);
+    -webkit-background-clip: text;
+    background-clip: text; /* also include unprefixed property for compatibility */
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 19px;
+    text-shadow: 3px 3px 10px rgba(79, 63, 63, 0.335);
+    margin-bottom: 25px;
+}
+.about h3{font-family: 'Cairo', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: #66495f;     
+    margin-bottom: 20px;}
+
+/* النص */
+.about p{
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    line-height: 2;
+    color: #555;
+    padding-right: 50px;
+    padding-left: 70px;
+}
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.btn-main{
+
+    background:#230016;
+    color:#fff;
+    padding:16px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-main:hover{
+    transform:translateY(-4px);
+}
+
+.btn-career{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#198754,#20c997);
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(25,135,84,.3);
+}
+
+.btn-career:hover{
+    width:220px;
+    border-radius:50px;
+    gap:10px;
+
+}
+
+.btn-career::after{
+    content:"انضم إلينا";
+    opacity:0;
+    width:0;
+    overflow:hidden;
+    white-space:nowrap;
+    transition:.3s;
+    font-size:17px;
+    font-weight:700;
+}
+
+.btn-career:hover::after{
+    opacity:1;
+    width:auto;
+}
+/*=========================
+services
+==========================*/
+.service-card{
+background:#fff;
+padding:15px;
+width:90%;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+height:100%;
+}
+
+.service-card i{
+font-size:20px;
+color:#64335c;
+margin-bottom:20px;
+}
+
+.service-card h4{
+font-size:18px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.service-card p{
+font-size:10px;
+font-weight:bold;
+margin-bottom:15px;
+}
+.service-card:hover{
+transform:translateY(-3px);
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+
+/*=========================
+/*=========================
+why us ????
+=========================*/
+.why-us{
+    background:#fff;
+    padding:90px 0;
+}
+
+.feature-item{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.feature-item i{
+    width:55px;
+    height:55px;
+    background:#414042;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:15px;
+    font-size:22px;
+}
+/*=========================
+/*=========================
+Doctors
+=========================*/
+
+#doctors .doctor-card{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:relative !important;
+    overflow:hidden;
+    background:#ffffff !important;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+#doctors .doctor-card:hover{
+
+    transform:scale(1.03);
+    box-shadow:0 5px 10px rgba(0,0,0,.18);
+
+}
+
+#doctors .doctor-card:hover img{
+    transform:scale(1.08);
+}
+#doctors .doctor-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+    transition:.5s;
+
+}
+
+#doctors .doctor-info{
+    display:block !important;
+    position:relative !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    padding:5px;
+    background:#fff;
+    color:#000;
+}
+
+.doctor-info h4{
+
+    font-size:24px;
+    font-weight:700;
+    color:#003B73;
+
+}
+
+.doctor-info span{
+
+    font-size:17px;
+    color:#00A8A8;
+}
+/*==========================
+    Stats Section
+==========================*/
+
+.stats{
+    background: linear-gradient(75deg,#fafafa,#ffffff);
+   padding:25px 0;   
+    position: relative;
+    z-index: 1;
+    margin-top:80px;
+}
+
+.stats .col-md-3{
+    margin-bottom:20px;
+}
+
+.stats h2{
+    font-family:'Cairo',sans-serif;
+    font-size:55px;
+    font-weight:900;
+    color:#110505;
+    margin-bottom:10px;
+}
+
+.stats p{
+    font-family:'Cairo',sans-serif;
+    font-size:20px;
+    color:#170e0e;
+    font-weight:700;
+    margin:0;
+}
+
+/* خط فاصل بين العدادات */
+.stats .col-md-3:not(:last-child){
+    border-left:1px solid rgba(255,255,255,.25);
+}
+
+/*=========================
+Gallery
+==========================*/
+.gallery{background:#f8fafc;
+}
+/* العنوان الرئيسي */
+.gallery h2 {
+    color: #0c0703; /* كحلي */
+}
+
+/* النص */
+.gallery p {
+    color: #0d0808; /* رمادي */
+}
+.gallery-item{
+    padding:15px;
+    width:100%;
+    height:auto;
+position:relative;
+overflow:hidden;
+border-radius:20px;
+cursor:pointer;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+width:100%;
+height:280px;
+border-radius: 14px;
+display: block;
+object-fit:cover;
+transition: transform 0.5s ease;
+}
+
+.gallery-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+transition:.4s;
+}
+
+.gallery-overlay i{
+font-size:45px;
+color:white;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
+}
+
+.gallery-item:hover .gallery-overlay{
+opacity:1;
+}
+
+/*=========================
+Testimonials
+=========================*/
+
+.testimonials{
+padding:80px 0;
+background:#f8fbff;
+}
+
+.review-card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
+height:100%;
+}
+.review-card:hover{
+transform:scale(1.05);
+}
+.review-card h4{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+.stars{
+color:#FFC107;
+font-size:22px;
+margin-bottom:15px;
+}
+.review-card p{
+color:#666;
+line-height:1.8;
+}
+
+/*=========================
+Contact
+==========================*/
+
+.contact-box{
+
+display:flex;
+
+align-items:center;
+
+margin-bottom:25px;
+
+font-size:20px;font-weight:bold
+
+}
+
+.contact-box i{
+
+width:60px;
+
+height:60px;
+
+background:#414042;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+margin-left:20px;
+
+}
+#topBtn{
+
+position:fixed;
+
+bottom:30px;
+
+left:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+background:#414042;
+
+color:white;
+
+border-radius:50%;
+
+display:none;
+
+cursor:pointer;
+
+z-index:999;
+
+font-size:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-5px);
+
+background:#060809;
+
+}
+.whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+color:white;
+
+z-index:9999;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+.call{
+
+position:fixed;
+
+right:25px;
+
+bottom:100px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:#111112;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+color:white;
+
+z-index:9999;
+
+transition:.3s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.call:hover{
+
+transform:scale(1.1);
+}
+
+/*=========================
+Insurance
+=========================*/
+.insurance{
+
+    background:#f8fbff;
+    padding:90px 0;
+}
+.insurance-card{
+    background:#fff;
+    border-radius:18px;
+    padding: 10px;
+    height:65px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.insurance-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+.insurance-card img{
+    max-width:150px;
+    max-height:70px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    transition:.3s;
+}
+.insurance-card:hover img{
+    transform:scale(1.05);
+}
+/*=========================
+footer
+==========================*/
+
+footer{
+   background:
+
+linear-gradient(
+
+rgb(101, 56, 108),
+
+rgb(59, 33, 55)
+);
+padding:5px 0 15px;min-height: 10px;
+
+}
+.footer-logo{
+    width:60px;
+    margin-bottom:6px;
+}
+.footer h3{
+    font-size:24px;
+    margin-bottom:6px;margin-top: 17px;
+}
+
+.footer h4{
+    font-size:18px;
+    margin:auto
+}
+.footer hr{
+    margin:20px 0 12px;
+}
+footer ul{
+list-style:none;
+
+padding:0;
+
+}
+
+footer li{
+font-size:15px;
+    line-height:1.6;
+margin-bottom:6px;
+
+}
+
+footer a{
+font-size:15px;
+    line-height:1.6;
+color:white;
+
+text-decoration:none;
+
+}
+
+footer a:hover{
+font-size:15px;
+    line-height:1.6;
+color:#3c4630;
+
+}
+
+footer i{
+font-size:15px;
+    line-height:1.6;
+margin-left:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+footer i:hover{
+transform:translateY(-5px);
+color:#48532a;
+}
+
+.footer-links li {
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #031016;
+
+    padding-right: 5px;
+
+}
+
+.footer-social a{
+    width:36px;
+    height:36px;
+    font-size:16px;
+}
+footer p{ font-size:15px;
+    line-height:1.6;}
+footer{
+
+position:relative;
+
+z-index:10;
+
+margin:0;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+section{
+
+position:relative;
+
+z-index:1;
+
+}
+
+.hero{
+
+overflow:hidden;
+
+}
+/*=========================
+Back To Top
+=========================*/
+#topBtn{
+    display:block !important;
+    position:fixed;
+    bottom:10px;
+    left:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#232a2f;
+    color:#fff;
+    z-index:99999;
+}
+
+#topBtn:hover{
+    background:#79184e;
+    transform:translateY(-5px);
+}
+/* =====================================================
+   PATIENT TESTIMONIALS
+===================================================== */
+
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(107, 52, 97, .10), transparent 29%),
+        radial-gradient(circle at 92% 88%, rgba(200, 155, 191, .18), transparent 26%),
+        #fbf9fb;
+}
+
+
+/* نموذج الرأي */
+
+.testimonial-form-card {
+    height: 100%;
+    padding: 32px;
+    border: 1px solid rgba(100, 51, 92, .12);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 18px 45px rgba(64, 38, 63, .09);
+}
+
+
+.testimonial-form-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+.testimonial-form-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+    background: #f2e8f0;
+    color: #64335c;
+    font-size: 22px;
+}
+
+
+.testimonial-form-header h3 {
+    margin: 0 0 5px;
+    color: #382d37;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+.testimonial-form-header p {
+    margin: 0;
+    color: #827781;
+    font-size: 14px;
+}
+
+
+/* النجوم */
+
+.rating-selector {
+    display: flex;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+
+.rating-star {
+    border: none;
+    background: transparent;
+
+    padding: 3px;
+
+    cursor: pointer;
+
+    color: #c8c3c7;
+
+    font-size: 25px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.rating-star.active {
+    color: #f4b400;
+}
+
+
+.rating-star:hover {
+    transform: scale(1.15);
+}
+
+.rating-star:focus-visible {
+    outline: 3px solid rgba(100, 51, 92, .25);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+
+/* البطاقات */
+
+.testimonial-card {
+    height: 100%;
+
+    padding: 25px;
+    border: 1px solid rgba(100, 51, 92, .10);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 12px 30px rgba(64, 38, 63, .07);
+
+    animation: testimonialAppear 0.4s ease;
+}
+
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(64, 38, 63, 0.12);
+
+}
+
+
+.testimonial-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid rgba(100, 51, 92, .14);
+}
+
+
+.testimonial-avatar.initials {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f2e8f0;
+    color: #64335c;
+
+    font-weight: 800;
+
+    font-size: 18px;
+}
+
+
+.testimonial-info h3 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
+}
+
+
+.testimonial-info span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.testimonial-rating {
+    margin-bottom: 15px;
+}
+
+
+.testimonial-rating i {
+    color: #d4a017;
+
+    margin-left: 3px;
+}
+
+
+.testimonial-comment {
+    position: relative;
+}
+
+
+.testimonial-comment > i {
+    color: #64335c;
+
+    opacity: 0.2;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.testimonial-comment p {
+    margin: 0;
+
+    color: #665d65;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+}
+
+.testimonial-form-card .form-label {
+    color: #4e414d;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.testimonial-form-card .form-control {
+    min-height: 48px;
+    border: 1px solid #e6dfe5;
+    border-radius: 13px;
+    color: #382d37;
+    box-shadow: none;
+}
+
+.testimonial-form-card textarea.form-control {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.testimonial-form-card .form-control:focus {
+    border-color: #8d5b84;
+    box-shadow: 0 0 0 4px rgba(100, 51, 92, .10);
+}
+
+.testimonial-form-card .btn-primary {
+    min-height: 52px;
+    border: 0;
+    border-radius: 14px;
+    background: #64335c;
+    font-weight: 700;
+    box-shadow: 0 10px 18px rgba(100, 51, 92, .17);
+}
+
+.testimonial-form-card .btn-primary:hover {
+    background: #4f2848;
+    transform: translateY(-2px);
+}
+
+
+@keyframes testimonialAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   Testimonials
+========================================= */
+
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Summary */
+
+.testimonial-summary {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.rating-box,
+.reviews-count-box {
+    min-width: 220px;
+    padding: 25px 35px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.rating-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #4a263f;
+    line-height: 1;
+}
+
+.rating-stars {
+    color: #f5b301;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.rating-label {
+    color: #777;
+    font-size: 14px;
+}
+
+.reviews-count {
+    font-size: 42px;
+    font-weight: 800;
+    color: #4a263f;
+    line-height: 1;
+}
+
+.reviews-count-label {
+    margin-top: 12px;
+    color: #777;
+}
+
+/* Testimonial Card */
+
+.testimonial-card {
+    height: 100%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+    font-size: 40px;
+    line-height: 1;
+    color: #4a263f;
+    opacity: 0.2;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    color: #555;
+    line-height: 1.9;
+    font-size: 15px;
+    min-height: 90px;
+}
+
+.testimonial-stars {
+    color: #f5b301;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #eee;
+}
+
+.testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #4a263f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    color: #333;
+}
+
+.testimonial-date {
+    font-size: 12px;
+    color: #999;
+}
+
+/* More Button */
+
+.testimonials-more-btn {
+    background-color: #4a263f;
+    border-color: #4a263f;
+    border-radius: 10px;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+.testimonials-more-btn:hover {
+    background-color: #321a2b;
+    border-color: #321a2b;
+    transform: translateY(-2px);
+}
+
+/* Dark Mode */
+
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .rating-box,
+[data-theme="dark"] .reviews-count-box {
+    background: #1f1f1f;
+}
+
+[data-theme="dark"] .testimonial-text,
+[data-theme="dark"] .testimonial-name {
+    color: #eee;
+}
+
+[data-theme="dark"] .testimonial-user {
+    border-color: #333;
+}

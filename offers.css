@@ -1,0 +1,1706 @@
+/* =====================================================
+   OFFERS PAGE
+===================================================== */
+:root{
+    --primary-color:#64335C;      /* Very Dark Grayish Magenta */
+    --primary-dark:#4F2848;
+    --primary-light:#8C5B83;
+    --secondary-color:#F8F5F7;
+    --accent-color:#C89BBF;
+    --text-color:#2F2F2F;
+    --white:#FFFFFF;
+--gray:#64748B;
+--radius:20px;
+--shadow:
+0 15px 40px rgba(0,0,0,.08);
+--transition:.35s;
+}
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 88px;
+
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(100, 51, 92, 0.10);
+
+    box-shadow:
+        0 8px 30px rgba(74, 24, 66, 0.06);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.navbar > .container {
+
+    width: 100%;
+    max-width: none;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   NAVIGATION AREA - أقصى اليسار
+========================================================= */
+
+.navbar-collapse {
+    display: flex !important;
+
+    flex: 1 1 auto;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    margin: 0 !important;
+}
+
+/* =========================================================
+   LOGO + NAME
+   أقصى اليمين
+========================================================= */
+
+.navbar-brand {
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+/* Logo */
+
+.navbar-brand .logo {
+
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+
+.navbar-brand:hover .logo {
+
+    transform: scale(1.05);
+}
+
+
+/* Site Name */
+
+.navbar-brand .brand-name {
+
+    color: #111;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+
+.navbar-brand:hover .brand-name {
+
+    color: #64335c;
+}
+
+
+/* =========================================================
+   NAVBAR COLLAPSE
+   يأخذ المساحة المتبقية
+========================================================= */
+
+.navbar-collapse {
+
+    flex-grow: 0 !important;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: auto;
+
+    margin-right: 0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   أقصى اليسار
+========================================================= */
+
+.navbar-nav {
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   NAV LINK
+========================================================= */
+
+.navbar-nav .nav-link {
+
+    position: relative;
+
+    padding:
+        12px 2px !important;
+
+    color: #171317;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.navbar-nav .nav-link:hover {
+
+    color: #64335c;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.navbar-nav .nav-link.active {
+
+    color: #64335c;
+}
+
+
+/* الخط أسفل العنصر */
+
+.navbar-nav .nav-link.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    left: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: #64335c;
+
+    transform-origin: center;
+
+    animation:
+        navActive 0.3s ease;
+}
+
+
+@keyframes navActive {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+/* =========================================================
+   DARK MODE BUTTON
+========================================================= */
+
+.dark-toggle {
+
+    width: 96px;
+    height: 52px;
+
+    margin-left: 28px !important;
+
+    margin-right: 0 !important;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 30px !important;
+
+    border:
+        1px solid rgba(100, 51, 92, 0.25) !important;
+
+    background:
+        rgba(100, 51, 92, 0.04);
+
+    color: #64335c;
+
+    font-size: 18px;
+
+    transition:
+        all 0.35s ease;
+}
+
+
+/* Hover */
+
+.dark-toggle:hover {
+
+    background: #64335c !important;
+
+    border-color: #64335c !important;
+
+    color: #fff !important;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(100, 51, 92, 0.20);
+}
+
+
+/* =========================================================
+   DARK MODE NAVBAR
+========================================================= */
+
+body.dark-mode .navbar {
+
+    background:
+        rgba(25, 20, 25, 0.72);
+
+    border-bottom-color:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.22);
+}
+
+
+body.dark-mode .navbar-brand .brand-name {
+
+    color: #fff;
+}
+
+
+body.dark-mode .navbar-nav .nav-link {
+
+    color: #eee;
+}
+
+
+body.dark-mode .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link.active {
+
+    color: #c89bbf;
+}
+
+
+body.dark-mode .navbar-nav .nav-link.active::after {
+
+    background: #c89bbf;
+}
+
+
+body.dark-mode .dark-toggle {
+
+    color: #fff;
+
+    border-color:
+        rgba(255, 255, 255, 0.4) !important;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .navbar > .container {
+
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    .navbar-nav {
+
+        gap: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+
+        min-height: 75px;
+    }
+
+
+    .navbar > .container {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .navbar-brand .logo {
+
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .navbar-brand .brand-name {
+
+        font-size: 19px;
+    }
+
+
+    .navbar-collapse {
+
+        margin-top: 15px;
+
+        padding:
+            15px;
+
+        border-radius: 16px;
+
+        background:
+            rgba(255, 255, 255, 0.95);
+
+        backdrop-filter:
+            blur(15px);
+
+        box-shadow:
+            0 15px 35px
+            rgba(74, 24, 66, 0.10);
+    }
+
+
+    .navbar-nav {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+    }
+
+
+    .navbar-nav .nav-link {
+
+        padding:
+            12px 15px !important;
+
+        border-radius: 10px;
+    }
+
+
+    .navbar-nav .nav-link:hover {
+
+        background:
+            rgba(100, 51, 92, 0.07);
+
+        transform: none;
+    }
+
+
+    .navbar-nav .nav-link.active::after {
+
+        display: none;
+    }
+
+
+    .dark-toggle {
+
+        width: 100%;
+
+        height: 45px;
+
+        margin:
+            12px 0 0 !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .navbar > .container {
+
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .navbar-brand .logo {
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .navbar-brand .brand-name {
+
+        font-size: 16px;
+    }
+
+
+    .navbar-toggler {
+
+        border: none !important;
+
+        padding: 8px;
+    }
+
+}
+
+/*=========================
+Active Navbar
+=========================*/
+
+.navbar .nav-link{
+    color:#120d0d !important;
+    font-weight:600;
+    margin:0 8px;
+    position:relative;
+    transition:.3s;
+}
+
+/* لون الرابط عند المرور */
+.navbar .nav-link:hover{
+    color:#7d2e74 !important;
+}
+
+/* الصفحة الحالية */
+.navbar .nav-link.active{
+    color:#640632 !important;
+}
+
+/* الخط المتحرك أسفل الرابط */
+.navbar .nav-link::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#430329;
+    transition:.3s;
+}
+
+/* يظهر عند المرور */
+.navbar .nav-link:hover::after{
+    width:100%;
+}
+
+/* يظهر أيضًا للرابط النشط */
+.navbar .nav-link.active::after{
+    width:100%;
+}
+.small-hero{
+height:45vh;
+background:url("../images/offers/banner.jpg") center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.offers-hero {
+    position: relative;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(91, 21, 72),
+            rgba(70.2, 31.4, 49.4)
+        ),
+        url("../images/offers/offers-bg.jpg")
+        center / cover no-repeat;
+
+    overflow: hidden;
+}
+
+
+.offers-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 24, 44, .15),
+            rgba(5, 24, 44, .55)
+        );
+
+}
+
+
+.offers-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #fff;
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.hero-small-title {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.14);
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.offers-hero h1 {
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+
+}
+
+
+.offers-hero p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin: 0;
+
+    opacity: .9;
+
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.offers-section {
+
+    padding: 90px 0;
+
+    background: #f8fafc;
+
+}
+
+
+.section-title {
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.section-title span {
+
+    display: inline-block;
+
+    color: var(--offer-primary);
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 38px;
+
+    font-weight: 900;
+
+    color: var(--offer-dark);
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title p {
+
+    color: #64748b;
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   OFFER CARD
+===================================================== */
+
+.offer-card {
+
+    height: 100%;
+
+    background: var(--offer-white);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--offer-border);
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, .07);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.offer-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(15, 23, 42, .14);
+
+}
+
+
+/* =====================================================
+   OFFER IMAGE
+===================================================== */
+
+.offer-image {
+
+    height: 235px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.offer-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+
+}
+
+
+.offer-card:hover .offer-image img {
+
+    transform: scale(1.07);
+
+}
+
+
+/* Discount */
+
+.discount {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    background: #dc3545;
+
+    color: #fff;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-shadow: 0 5px 15px rgba(220,53,69,.3);
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.offer-content {
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+}
+
+
+.offer-category {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--offer-primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.offer-content h3 {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: var(--offer-dark);
+
+    margin-bottom: 10px;
+
+}
+
+
+.offer-description {
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+    min-height: 58px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.old-price {
+
+    color: #94a3b8;
+
+    text-decoration: line-through;
+
+    font-size: 15px;
+
+}
+
+
+.price strong {
+
+    color: #16a34a;
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+}
+
+
+.price strong small {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+.offer-timer {
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.timer-title {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.timer {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 7px;
+
+}
+
+
+.timer div {
+
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    padding: 8px 4px;
+
+}
+
+
+.timer strong {
+
+    display: block;
+
+    color: var(--offer-dark);
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+
+.timer small {
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.offer-btn {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--offer-primary),
+            var(--offer-secondary)
+        );
+
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border-radius: 13px;
+
+    font-weight: 800;
+
+    transition: .3s ease;
+
+    margin-top: auto;
+
+}
+
+
+.offer-btn:hover {
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.25);
+
+}
+
+
+.offer-btn i {
+
+    transition: transform .3s ease;
+
+}
+
+
+.offer-btn:hover i {
+
+    transform: translateX(-5px);
+
+}
+
+
+/* =====================================================
+   BACK HOME
+===================================================== */
+
+.back-home {
+
+    margin-top: 55px;
+
+}
+
+
+.back-home-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    border: 1px solid #cbd5e1;
+
+    color: var(--offer-dark);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    background: #fff;
+
+    transition: .3s ease;
+
+}
+
+
+.back-home-btn:hover {
+
+    background: var(--offer-primary);
+
+    color: #fff;
+
+    border-color: var(--offer-primary);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.medical-
+footer{
+   background:
+
+linear-gradient(
+
+rgb(101, 56, 108),
+
+rgb(59, 33, 55)
+);
+padding:5px 0 15px;min-height: 10px;
+
+}
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-brand img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
+.footer-brand h3 {
+
+    color: #fff;
+
+    font-size: 20px;
+
+    margin: 0;
+
+    font-weight: 800;
+
+}
+
+
+.medical-footer h4 {
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+
+.medical-footer p {
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+}
+
+
+.footer-links {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-links li {
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #031016;
+
+    padding-right: 5px;
+
+}
+
+
+/* Social */
+
+.footer-social a{
+    width:36px;
+    height:36px;
+    font-size:16px;
+}
+footer p{ font-size:15px;
+    line-height:1.6;}
+footer{
+
+position:relative;
+
+z-index:10;
+
+margin:0;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+section{
+
+position:relative;
+
+z-index:1;
+
+}
+
+.hero{
+
+overflow:hidden;
+
+}
+
+
+.medical-footer hr {
+
+    border-color: rgba(255,255,255,.12);
+
+    margin: 35px 0 20px;
+
+}
+
+
+.footer-bottom {
+
+    text-align: center;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+}
+
+
+/* =====================================================
+   FLOATING BUTTONS
+===================================================== */
+
+.floating-btn {
+
+    position: fixed;
+
+    left: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    z-index: 999;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+
+    transition: .3s ease;
+
+}
+
+
+.floating-btn:hover {
+
+    color: #fff;
+
+    transform: scale(1.08);
+
+}
+
+
+.call {
+
+    bottom: 140px;
+
+    background: #041227;
+
+}
+
+
+.whatsapp {
+
+    bottom: 80px;
+
+    background: #25d366;
+
+}
+
+
+/* Back top */
+
+#topBtn {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #0f172a;
+
+    color: #fff;
+
+    z-index: 999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: .3s ease;
+
+}
+
+
+#topBtn.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode .offers-section {
+
+    background: #0f172a;
+
+}
+
+
+body.dark-mode .section-title h2 {
+
+    color: #fff;
+
+}
+
+
+body.dark-mode .section-title p {
+
+    color: #94a3b8;
+
+}
+
+
+body.dark-mode .offer-card {
+
+    background: #111827;
+
+    border-color: #1e293b;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+body.dark-mode .offer-content h3 {
+
+    color: #fff;
+
+}
+
+
+body.dark-mode .offer-description {
+
+    color: #94a3b8;
+
+}
+
+
+body.dark-mode .offer-timer {
+
+    background: #0f172a;
+
+}
+
+
+body.dark-mode .timer div {
+
+    background: #111827;
+
+    border-color: #334155;
+
+}
+
+
+body.dark-mode .timer strong {
+
+    color: #fff;
+
+}
+
+
+body.dark-mode .back-home-btn {
+
+    background: #111827;
+
+    border-color: #334155;
+
+    color: #fff;
+
+}
+.offers-loading,
+.no-offers,
+.offers-error {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.offers-loading i,
+.no-offers i,
+.offers-error i {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: var(--primary-color, #3b2638);
+}
+
+.offers-loading p,
+.no-offers p,
+.offers-error p {
+    margin: 0;
+    color: var(--text-color, #777);
+}
+
+.no-offers h3,
+.offers-error h3 {
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+
+/*=========================
+footer
+==========================*/
+
+footer{
+   background:
+
+linear-gradient(
+
+rgb(101, 56, 108),
+
+rgb(59, 33, 55)
+);
+padding:5px 0 15px;min-height: 10px;
+
+}
+.footer-logo{
+    width:60px;
+    margin-bottom:6px;
+}
+.footer h3{
+    font-size:24px;
+    margin-bottom:6px;margin-top: 17px;
+}
+
+.footer h4{
+    font-size:18px;
+    margin:auto
+}
+.footer hr{
+    margin:20px 0 12px;
+}
+footer ul{
+list-style:none;
+
+padding:0;
+
+}
+
+footer li{
+font-size:15px;
+    line-height:1.6;
+margin-bottom:6px;
+
+}
+
+footer a{
+font-size:15px;
+    line-height:1.6;
+color:white;
+
+text-decoration:none;
+
+}
+
+footer a:hover{
+font-size:15px;
+    line-height:1.6;
+color:#3c4630;
+
+}
+
+footer i{
+font-size:15px;
+    line-height:1.6;
+margin-left:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+footer i:hover{
+transform:translateY(-5px);
+color:#48532a;
+}
+
+.footer-links li {
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #031016;
+
+    padding-right: 5px;
+
+}
+
+.footer-social a{
+    width:36px;
+    height:36px;
+    font-size:16px;
+}
+footer p{ font-size:15px;
+    line-height:1.6;}
+footer{
+
+position:relative;
+
+z-index:10;
+
+margin:0;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+section{
+
+position:relative;
+
+z-index:1;
+
+}
+
+.hero{
+
+overflow:hidden;
+
+}

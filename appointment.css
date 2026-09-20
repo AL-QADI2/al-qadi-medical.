@@ -1,0 +1,1054 @@
+/* =================================================
+   Booking Page
+================================================= */
+.booking-page {
+    padding-top: 45px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+
+/* =================================================
+   Booking Header
+================================================= */
+
+.booking-header {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+    padding: 0 15px;
+
+}
+
+
+.booking-header h1 {
+
+    font-weight: 800;
+
+    color: #64335C;
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.booking-header p {
+
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin: 0 auto;
+
+    max-width: 700px;
+
+}
+
+/* =================================================
+   NAVBAR - مجمع القاضي الطبي
+================================================= */
+
+.navbar {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    min-height: 78px;
+
+    z-index: 99999 !important;
+
+    background: rgba(255, 255, 255, 0.97) !important;
+
+    box-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.10);
+
+    padding: 8px 0 !important;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =================================================
+   Container
+================================================= */
+
+.navbar .container {
+
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =================================================
+   Logo
+================================================= */
+
+.navbar .logo {
+
+    width: 58px !important;
+
+    height: 58px !important;
+
+    max-width: 58px !important;
+
+    max-height: 58px !important;
+
+    object-fit: contain !important;
+
+    display: block;
+
+}
+
+
+/* اسم المجمع */
+
+.navbar-brand {
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #64335C !important;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+.navbar-brand:hover {
+
+    color: #4d2747 !important;
+
+}
+
+
+/* =================================================
+   روابط القائمة
+================================================= */
+
+.navbar-nav {
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+.navbar .nav-link {
+
+    color: #333 !important;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    padding: 10px 13px !important;
+
+    border-radius: 8px;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.navbar .nav-link:hover {
+
+    color: #64335C !important;
+
+    background: rgba(100, 51, 92, 0.08);
+
+}
+
+
+/* الرابط الحالي */
+
+.navbar .nav-link.active {
+
+    color: #ffffff !important;
+
+    background: #64335C;
+
+}
+
+
+/* =================================================
+   زر الوضع الليلي
+================================================= */
+
+#darkModeToggle {
+
+    border-color: #64335C !important;
+
+    color: #64335C !important;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+}
+
+
+#darkModeToggle:hover {
+
+    background: #64335C !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* =================================================
+   زر الموبايل
+================================================= */
+
+.navbar-toggler {
+
+    border: 1px solid #64335C !important;
+
+    padding: 7px 10px;
+
+}
+
+
+.navbar-toggler:focus {
+
+    box-shadow:
+        0 0 0 3px rgba(100, 51, 92, 0.15);
+
+}
+
+
+/* =================================================
+   مهم جدًا
+   منع محتوى الصفحة من الاختفاء خلف الهيدر
+================================================= */
+
+body {
+
+    padding-top: 78px;
+
+}
+
+
+/* =================================================
+   Tablet
+================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+
+        min-height: 70px;
+
+    }
+
+
+    .navbar .container {
+
+        min-height: 58px;
+
+    }
+
+
+    .navbar .logo {
+
+        width: 52px !important;
+
+        height: 52px !important;
+
+        max-width: 52px !important;
+
+        max-height: 52px !important;
+
+    }
+
+
+    .navbar-brand {
+
+        font-size: 18px;
+
+    }
+
+
+    body {
+
+        padding-top: 70px;
+
+    }
+
+
+    .navbar-collapse {
+
+        background: #ffffff;
+
+        margin-top: 8px;
+
+        padding: 15px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.10);
+
+    }
+
+
+    .navbar-nav {
+
+        align-items: stretch;
+
+    }
+
+
+    .navbar .nav-link {
+
+        text-align: right;
+
+        padding: 11px 14px !important;
+
+    }
+
+
+    #darkModeToggle {
+
+        margin-top: 10px;
+
+        margin-right: 0 !important;
+
+    }
+
+}
+
+
+/*=========================
+footer
+==========================*/
+
+footer{
+   background:
+
+linear-gradient(
+
+rgb(101, 56, 108),
+
+rgb(59, 33, 55)
+);
+padding:5px 0 15px;min-height: 10px;
+
+}
+.footer-logo{
+    width:60px;
+    margin-bottom:6px;
+}
+.footer h3{
+    font-size:24px;
+    margin-bottom:6px;margin-top: 17px;
+}
+
+.footer h4{
+    font-size:18px;
+    margin:auto
+}
+.footer hr{
+    margin:20px 0 12px;
+}
+footer ul{
+list-style:none;
+
+padding:0;
+
+}
+
+footer li{
+font-size:15px;
+    line-height:1.6;
+margin-bottom:6px;
+
+}
+
+footer a{
+font-size:15px;
+    line-height:1.6;
+color:white;
+
+text-decoration:none;
+
+}
+
+footer a:hover{
+font-size:15px;
+    line-height:1.6;
+color:#3c4630;
+
+}
+
+footer i{
+font-size:15px;
+    line-height:1.6;
+margin-left:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+footer i:hover{
+transform:translateY(-5px);
+color:#48532a;
+}
+
+.footer-links li {
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #031016;
+
+    padding-right: 5px;
+
+}
+
+.footer-social a{
+    width:36px;
+    height:36px;
+    font-size:16px;
+}
+footer p{ font-size:15px;
+    line-height:1.6;}
+footer{
+
+position:relative;
+
+z-index:10;
+
+margin:0;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+section{
+
+position:relative;
+
+z-index:1;
+
+}
+
+.hero{
+
+overflow:hidden;
+
+}
+/* =================================================
+   Mobile
+================================================= */
+
+@media (max-width: 576px) {
+
+    .navbar {
+
+        min-height: 65px;
+
+        padding: 5px 0 !important;
+
+    }
+
+
+    .navbar .container {
+
+        min-height: 55px;
+
+    }
+
+
+    .navbar .logo {
+
+        width: 45px !important;
+
+        height: 45px !important;
+
+        max-width: 45px !important;
+
+        max-height: 45px !important;
+
+    }
+
+
+    .navbar-brand {
+
+        font-size: 16px;
+
+        gap: 5px;
+
+    }
+
+
+    .navbar-toggler {
+
+        padding: 5px 8px;
+
+    }
+
+
+    body {
+
+        padding-top: 65px;
+
+    }
+
+
+    .navbar-collapse {
+
+        margin-top: 5px;
+
+        padding: 10px;
+
+    }
+
+}
+/* =================================================
+   Booking Card
+================================================= */
+
+.booking-card {
+
+    background: #fff;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    width: 100%;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .08);
+
+}
+
+
+/* =================================================
+   Labels
+================================================= */
+
+.booking-card label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+}
+
+
+/* =================================================
+   Inputs
+================================================= */
+
+.booking-card .form-control,
+.booking-card .form-select {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    padding: 10px 15px;
+
+    font-size: 16px;
+
+    transition: all .25s ease;
+
+}
+
+
+/* عند الضغط داخل الحقل */
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+
+    border-color: #64335C;
+
+    box-shadow:
+        0 0 0 3px rgba(100, 51, 92, .10);
+
+}
+
+
+/* =================================================
+   Textarea
+================================================= */
+
+.booking-card textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+
+    line-height: 1.7;
+
+}
+
+
+/* =================================================
+   Booking Button
+================================================= */
+
+.booking-btn {
+
+    background: #64335C;
+
+    border: none;
+
+    color: #fff;
+
+    min-height: 54px;
+
+    padding: 12px 35px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    font-size: 17px;
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+
+}
+
+
+.booking-btn:hover {
+
+    background: #4d2747;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(100, 51, 92, .20);
+
+}
+
+
+/* =================================================
+   Booking Info
+================================================= */
+
+.booking-info {
+
+    background: #64335C;
+
+    color: #fff;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    height: 100%;
+
+    min-height: 100%;
+
+}
+
+
+.booking-info h3 {
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+
+    font-size: 25px;
+
+}
+
+
+/* =================================================
+   Booking Info Items
+================================================= */
+
+.booking-info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.6;
+
+}
+
+
+.booking-info-item i {
+
+    width: 45px;
+
+    min-width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 18px;
+
+}
+
+
+/* =================================================
+   Success / Error Message
+================================================= */
+
+#bookingMessage {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+}
+
+
+/* =================================================
+   Tablet
+   iPad / Android Tablet
+================================================= */
+
+@media (max-width: 991px) {
+
+    .booking-page {
+
+        padding-top: 30px;
+        padding-bottom: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+
+    .booking-header {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .booking-header h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .booking-card {
+
+        padding: 30px;
+
+    }
+
+
+    .booking-info {
+
+        padding: 30px;
+
+    }
+
+}
+
+
+/* =================================================
+   Mobile
+   iPhone / Android
+================================================= */
+
+@media (max-width: 768px) {
+
+    .booking-page {
+        padding-top: 45px;
+        padding-bottom: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+
+    .booking-header {
+
+        margin-bottom: 20px;
+        padding: 0 8px;
+
+    }
+
+
+    .booking-header h1 {
+
+        font-size: 28px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .booking-header p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .booking-card {
+
+        padding: 22px 16px;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,.07);
+
+    }
+
+
+    .booking-card label {
+
+        font-size: 15px;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .booking-card .form-control,
+    .booking-card .form-select {
+
+        min-height: 50px;
+
+        font-size: 16px;
+
+        border-radius: 10px;
+
+        padding: 10px 12px;
+
+    }
+
+
+    .booking-card textarea {
+
+        min-height: 110px;
+
+    }
+
+
+    .booking-btn {
+
+        width: 100%;
+
+        min-height: 52px;
+
+        padding: 12px 20px;
+
+        font-size: 16px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .booking-info {
+
+        margin-top: 25px;
+
+        padding: 25px 18px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .booking-info h3 {
+
+        font-size: 22px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .booking-info-item {
+
+        gap: 12px;
+
+        margin-bottom: 20px;
+
+        font-size: 15px;
+
+    }
+
+
+    .booking-info-item i {
+
+        width: 42px;
+
+        min-width: 42px;
+
+        height: 42px;
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* =================================================
+   Small Mobile
+   iPhone SE / Small Android
+================================================= */
+
+@media (max-width: 480px) {
+
+    .booking-page {
+
+        padding-top: 65px;
+        padding-bottom: 30px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+
+    .booking-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .booking-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .booking-card {
+
+        padding: 18px 12px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .booking-card .form-control,
+    .booking-card .form-select {
+
+        min-height: 49px;
+
+        font-size: 16px;
+
+    }
+
+
+    .booking-btn {
+
+        min-height: 50px;
+
+        font-size: 15px;
+
+    }
+
+
+    .booking-info {
+
+        padding: 22px 15px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .booking-info h3 {
+
+        font-size: 20px;
+
+    }
+
+}

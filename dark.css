@@ -1,0 +1,187 @@
+/*==========================
+        Dark Mode
+==========================*/
+
+body.dark-mode{
+    background:#0f172a;
+    color:#e2e8f0;
+    transition:.35s ease;
+}
+body.dark-mode .scroll-top,
+body.dark-mode .whatsapp-btn{
+
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+/* جميع الأقسام */
+body.dark-mode section{
+    background:#0f172a;
+    color:#e2e8f0;
+}
+
+/* العناوين */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6{
+    color:#ffffff;
+}
+
+/* الفقرات */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li{
+    color:#cbd5e1;
+}
+
+/*==========================
+        Navbar
+==========================*/
+
+body.dark-mode .navbar{
+    background:#111827;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+body.dark-mode .navbar.scrolled{
+    background:rgba(2, 6, 23, .62);
+    backdrop-filter:blur(18px) saturate(135%);
+    -webkit-backdrop-filter:blur(18px) saturate(135%);
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link{
+    color:#fff !important;
+}
+
+body.dark-mode .nav-link:hover{
+    color:#38bdf8 !important;
+}
+
+/*==========================
+      Cards
+==========================*/
+
+body.dark-mode .service-card,
+body.dark-mode .doctor-card,
+body.dark-mode .review-card,
+body.dark-mode .appointment-form{
+    background:#1e293b;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+body.dark-mode .service-card p,
+body.dark-mode .doctor-card span,
+body.dark-mode .review-card p{
+    color:#cbd5e1;
+}
+
+/*==========================
+      Forms
+==========================*/
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+
+    background:#334155;
+    color:#fff;
+    border:1px solid #475569;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#94a3b8;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus{
+
+    background:#3b475b;
+    border-color:#38bdf8;
+    box-shadow:none;
+}
+
+/*==========================
+      Sections
+==========================*/
+
+body.dark-mode .about,
+body.dark-mode .gallery,
+body.dark-mode .contact,
+body.dark-mode .stats,
+body.dark-mode .faq,
+body.dark-mode .services,
+body.dark-mode .doctors,
+body.dark-mode .reviews{
+    background:#111827;
+}
+
+/*==========================
+      Footer
+==========================*/
+
+body.dark-mode footer{
+    background:#020617;
+    color:#cbd5e1;
+}
+
+body.dark-mode footer a{
+    color:#fff;
+}
+
+body.dark-mode footer a:hover{
+    color:#38bdf8;
+}
+
+/*==========================
+      Buttons
+==========================*/
+
+body.dark-mode .btn-primary{
+    background:#2563eb;
+    border-color:#2563eb;
+}
+
+body.dark-mode .btn-primary:hover{
+    background:#1d4ed8;
+}
+
+body.dark-mode .btn-outline-primary{
+    color:#38bdf8;
+    border-color:#38bdf8;
+}
+
+body.dark-mode .btn-outline-primary:hover{
+    background:#38bdf8;
+    color:#fff;
+}
+
+/*==========================
+      Icons
+==========================*/
+
+body.dark-mode i{
+    color:inherit;
+}
+
+/*==========================
+      Images
+==========================*/
+
+body.dark-mode img{
+    filter:none;
+}
+
+/*==========================
+      Selection
+==========================*/
+
+body.dark-mode ::selection{
+    background:#2563eb;
+    color:#fff;
+}
